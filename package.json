@@ -1,0 +1,36 @@
+{
+  "name": "xprezzo-stream-unpipe",
+  "description": "Unpipe a stream from all destinations and fire all the onclose and cleanup events",
+  "version": "1.0.0",
+  "author": "Ben Ajenoui <info@seohero.io>",
+  "license": "MIT",
+  "repository": "xprezzo/xprezzo-stream-unpipe",
+  "devDependencies": {
+    "eslint": "7.11.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-markdown": "1.0.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "mocha": "8.2.0",
+    "nyc": "15.1.0",
+    "readable-stream": "3.6.0"
+  },
+  "files": [
+    "HISTORY.md",
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.8",
+    "npm": "1.2.8000 || >= 1.4.16"
+  },
+  "scripts": {
+    "lint": "eslint --ext js .",
+    "test": "mocha --trace-deprecation --reporter spec --bail --check-leaks test/",
+    "test-cov": "nyc --reporter=html --reporter=text npm test",
+    "test-travis": "nyc --reporter=text npm test"
+  }
+}
